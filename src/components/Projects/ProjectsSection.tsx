@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 import { TerminalWindow } from '../Terminal/TerminalWindow';
 import { TerminalPrompt } from '../Terminal/TerminalPrompt';
 import { SnakeGame } from './SnakeGame';
@@ -33,7 +32,6 @@ const projects: Project[] = [
 ];
 
 export const ProjectsSection = () => {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
     <section id="projects" className="py-20 px-4">
@@ -65,7 +63,6 @@ export const ProjectsSection = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   className="text-terminal-success cursor-pointer hover:text-terminal-green transition-colors"
-                  onClick={() => setSelectedProject(project)}
                 >
                   {project.isGame ? '🎮' : '📦'} {project.title}
                 </motion.div>

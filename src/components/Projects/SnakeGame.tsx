@@ -16,7 +16,6 @@ export const SnakeGame = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [snake, setSnake] = useState<Position[]>(INITIAL_SNAKE);
   const [food, setFood] = useState<Position>(INITIAL_FOOD);
-  const [direction, setDirection] = useState<Position>({ x: 1, y: 0 });
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
@@ -139,7 +138,6 @@ export const SnakeGame = () => {
     }
 
     directionRef.current = newDirection;
-    setDirection(newDirection);
   }, [gameOver]);
 
   useEffect(() => {
@@ -150,7 +148,6 @@ export const SnakeGame = () => {
   const resetGame = () => {
     setSnake(INITIAL_SNAKE);
     setFood(INITIAL_FOOD);
-    setDirection({ x: 1, y: 0 });
     directionRef.current = { x: 1, y: 0 };
     setScore(0);
     setGameOver(false);
