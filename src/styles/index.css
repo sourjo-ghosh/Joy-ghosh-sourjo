@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-terminal-text-secondary/20;
+  }
+  
+  body {
+    @apply bg-terminal-bg text-terminal-text font-mono antialiased;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-terminal-green to-terminal-success bg-clip-text text-transparent;
+  }
+  
+  .glow-green {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+  }
+  
+  .glow-success {
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  }
+}
+
