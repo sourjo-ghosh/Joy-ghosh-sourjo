@@ -107,7 +107,7 @@ export const HeroSection = () => {
               className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-terminal-green relative mx-auto"
             >
               <motion.img
-                src="/profile.jpg"
+                src={`${import.meta.env.BASE_URL}profile.jpg`}
                 alt="Joy Ghosh Sourjo"
                 className="w-full h-full object-cover"
                 whileHover={{ scale: 1.1 }}

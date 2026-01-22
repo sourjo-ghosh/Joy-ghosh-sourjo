@@ -162,7 +162,7 @@ export const AboutSection = () => {
             className="w-full max-w-md rounded-lg overflow-hidden border border-terminal-green/30 glow-green relative"
           >
             <motion.img
-              src="/profile.jpg"
+              src={`${import.meta.env.BASE_URL}profile.jpg`}
               alt="About"
               className="w-full h-auto"
               whileHover={{ scale: 1.1 }}
