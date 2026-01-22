@@ -34,8 +34,8 @@ const projects: Project[] = [
 export const ProjectsSection = () => {
 
   return (
-    <section id="projects" className="py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+    <section id="projects" className="py-20 px-4 w-full overflow-x-hidden">
+      <div className="max-w-7xl mx-auto w-full">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

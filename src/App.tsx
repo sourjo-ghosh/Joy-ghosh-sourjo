@@ -7,16 +7,16 @@ import { ContactSection } from './components/Contact/ContactSection';
 
 function App() {
   return (
-    <div className="min-h-screen bg-terminal-bg">
+    <div className="min-h-screen bg-terminal-bg w-full overflow-x-hidden">
       <Navbar />
-      <main>
+      <main className="w-full overflow-x-hidden">
         <HeroSection />
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />
         <ContactSection />
       </main>
-      <footer className="py-8 px-4 text-center text-terminal-text-secondary border-t border-terminal-text-secondary/20">
+      <footer className="py-8 px-4 text-center text-terminal-text-secondary border-t border-terminal-text-secondary/20 w-full">
         <p>&copy; 2025 Joy Ghosh Sourjo. All rights reserved.</p>
       </footer>
     </div>

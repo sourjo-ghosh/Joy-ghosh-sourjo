@@ -91,8 +91,8 @@ export const SkillsSection = () => {
   const categories = Array.from(new Set(skills.map(s => s.category)));
 
   return (
-    <section id="skills" className="py-20 px-4 bg-terminal-card/30">
-      <div className="max-w-7xl mx-auto">
+    <section id="skills" className="py-20 px-4 bg-terminal-card/30 w-full overflow-x-hidden">
+      <div className="max-w-7xl mx-auto w-full">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

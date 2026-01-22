@@ -10,10 +10,18 @@
   body {
     @apply bg-terminal-bg text-terminal-text font-mono antialiased;
     font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    overflow-x: hidden;
+    width: 100%;
   }
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  * {
+    max-width: 100%;
   }
 }
 
@@ -29,5 +37,23 @@
   .glow-success {
     box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
   }
+
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Prevent horizontal scroll */
+section {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 

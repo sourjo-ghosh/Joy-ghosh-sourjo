@@ -4,7 +4,7 @@ import { TerminalPrompt } from '../Terminal/TerminalPrompt';
 
 export const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-20 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 pt-20 relative overflow-hidden w-full">
       {/* Animated Background Particles */}
       {[...Array(15)].map((_, i) => (
         <motion.div
@@ -27,7 +27,7 @@ export const HeroSection = () => {
           }}
         />
       ))}
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center w-full">
         {/* Left Side - Text Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -104,7 +104,7 @@ export const HeroSection = () => {
                 scale: [1, 1.02, 1],
               }}
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-              className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-terminal-green relative"
+              className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-terminal-green relative mx-auto"
             >
               <motion.img
                 src="/profile.jpg"
